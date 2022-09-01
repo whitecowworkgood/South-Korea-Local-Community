@@ -1,3 +1,14 @@
+<h3 align="center"><b>🛠 Tech Stack 🛠</b></h3>
+</br>
+<p align="center">
+<img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
+<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white">
+<img src="https://img.shields.io/badge/MYSQL-4479A1?style=for-the-badge&logo=MYSQL&logoColor=white">
+<img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=CSS&logoColor=white">
+
+
+
+
 # south-korea-community
 지역별로 각자의 커뮤니티를 운용하도록 만들어본 프로젝트
 현재는 하나의 지역만 게시판이 만들어져 있지만, 추후 추가를 한다면 언제든지 증원 가능
