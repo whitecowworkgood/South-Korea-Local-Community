@@ -1,0 +1,33 @@
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>게시판</title>
+<link rel="stylesheet" type="text/css" href="../css/write.css" />
+</head>
+<body>
+    <div class="board_write">
+        <h1 ><a href="/">게시글 작성</a></h1>
+        <h4>글을 작성하는 공간입니다.</h4>
+            <div>
+                <form action="../php/write_ok.php" method="post" enctype="multipart/form-data">
+                    <div>
+                        <textarea name="title" rows="2" cols="120" placeholder="제목" maxlength="100" required></textarea>
+                    </div>
+					
+                    <div>
+                        <textarea name="content" placeholder="내용" rows="40" cols="120" maxlength="1000"></textarea>
+						<br>
+						
+                    </div>
+					<div>
+						<span style="color:black">Send this file: <input type="file" name="myfile" />
+					</div>
+                    <div class="butten">
+                        <button type="submit">글 작성</button>
+                    </div>
+					
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

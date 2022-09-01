@@ -1,0 +1,38 @@
+
+h1 {
+  display: inline-block;
+  vertical-align: middle;
+  color: black;
+  margin: 0.5rem;
+  padding: 0;
+}
+
+td{
+	  vertical-align: middle;
+	    text-align: center;
+}
+
+li.icon {
+  flex-basis: 25%;
+}
+.header {
+  background-color: cadetblue;
+  padding: 20px;
+  text-align: center;
+
+}
+.table{
+  text-align: center;
+}
+
+a:hover {
+  background: yellowgreen;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

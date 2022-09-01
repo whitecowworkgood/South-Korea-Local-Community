@@ -1,0 +1,30 @@
+
+table {
+    width: 100%;
+    border-top: 1px solid #444444;
+	 border-collapse: collapse;
+  }
+.tr{
+	    background-color: cadetblue;
+  }
+th, td {
+    border: 1px solid #444444;
+	    padding: 10px;
+  }
+.name{
+	text-align:center;
+}
+.idx{
+	text-align:center;
+}
+#page{
+	text-align:center;
+}
+.butten{
+	color: white;
+	font-weight: bold;
+	background-color: cadetblue;
+	width:95px;
+    height:55px;
+}
+	

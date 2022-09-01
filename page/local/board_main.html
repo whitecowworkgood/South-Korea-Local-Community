@@ -1,0 +1,116 @@
+<?php 
+	include "../../php/boarddb.php"; 
+	if(isset($_SESSION['userid'])){
+?>
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>게시판</title>
+</head>
+<link href="../../css/board.css" type="text/css" rel="stylesheet" />
+<body>
+<div> 
+  <h1 align="center">자유게시판</h1>
+  <h4 align="center">자유롭게 글을 쓸 수 있는 게시판입니다.</br> 게시글 매너를 지켜주세요.</h4>
+    <table>
+      <thead>
+          <tr class="tr">
+              <th width="50">번호</th>
+              <th width="300">제목</th>
+              <th width="100">글쓴이</th>
+           </tr>
+      </thead>
+<?php
+       if(isset($_GET['page'])){
+          $page = $_GET['page'];
+            }else{
+              $page = 1;
+            }
+              $sql = mq2("select * from board");
+              $row_num = mysqli_num_rows($sql);
+              $list = 10;
+              $block_ct = 10;
+
+              $block_num = ceil($page/$block_ct);
+              $block_start = (($block_num - 1) * $block_ct) + 1;
+              $block_end = $block_start + $block_ct - 1;
+
+              $total_page = ceil($row_num / $list);
+              if($block_end > $total_page) $block_end = $total_page;
+              $total_block = ceil($total_page/$block_ct);
+              $start_num = ($page-1) * $list;
+
+              $sql2 = mq2("select * from board order by idx desc limit $start_num, $list");  
+              while($board = $sql2->fetch_array()){
+              $title=$board["title"]; 
+                if(strlen($title)>30)
+                { 
+                  $title=str_replace($board["title"],mb_substr($board["title"],0,30,"utf-8")."...",$board["title"]);
+                }
+?>
+      <tbody>
+        <tr>
+          <td class="idx" width="50"><?php echo $board['idx']; ?></td>
+          <td width="300"><a href="../read.html?idx=<?php echo $board["idx"];?>"><?php echo $title;?></a></td>
+          <td class="name" width="100"><?php echo $board['name']?></td>
+        </tr>
+      </tbody>
+<?php } ?>
+    </table>
+	</br>
+<div id = "page">
+<?php
+	if($page <=1){
+		echo "처음 ";
+	}
+	else{
+		echo "<a href='?page=1'>처음 </a>";
+	}
+	if($page <= 1){
+	}
+	else{
+		$pre = $page-1;
+		echo "<a href='?page=$pre'>이전 </a>";
+	}
+	for($i=$block_start; $i<=$block_end;$i++){
+		if($page == $i){
+		echo "[$i] ";
+		}
+		else{
+			echo "<a href='?page=$i'>[$i] </a>";
+		}
+	}
+	
+	if($block_num >= $total_block){
+	}
+	else{
+		$next = $page +1;
+		echo "<a href='?[age=$next'>다음</a>";
+	}
+	if($page >= $total_page){
+		echo "마지막 ";
+	}
+	else{
+		echo "<a href='?page=$total_page'>마지막 </a>";
+	}
+		
+?>
+</div>
+</br>
+
+	<div  align="right" >
+		<a href="../write.html"><button class="butten">글쓰기</button></a>
+		<a href="../main.html"><button class="butten">메인 페이지</button></a>
+	</div>
+
+  </div>
+</body>
+
+</html>
+
+<?php
+	}
+	else{
+		echo "<script>alert('잘못된 접근입니다.'); history.back();</script>";
+		}
+?>

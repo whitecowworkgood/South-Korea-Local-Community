@@ -1,0 +1,44 @@
+<?php
+	include "../php/boarddb.php";
+	if(isset($_SESSION['userid'])){
+?>
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>게시판</title>
+</head>
+<body>
+	<?php
+		$bno = $_GET['idx'];
+		$sql = mq2("select * from board where idx='".$bno."'");
+		$board = $sql->fetch_array();
+	?>
+<!-- 글 불러오기 -->
+<div>
+	<h2 align="center">게시글 <?php echo $board['title']; ?></h2>
+	<hr>
+		<div>
+			<h4 align="right">작성자 :<?php echo $board['name']; ?> </h4>
+		</div>
+		<hr><div>
+				<img src=<?php echo $board['path'].$board['filename']; ?> alt=""><!-- 파일 출력 부분-->
+				<br>
+				<?php echo nl2br("$board[content]"); ?>
+			</div>
+			<br><br>
+			<div align="right">
+                <a href="./local/board_main.html"><button type="submit"> 게시판</button></a>
+						
+						<a href="./modify.html?idx=<?php echo $board['idx'];?>"><button type="submit"> 글 수정</button></a>
+						<a href="../php/delete.php?idx=<?php echo $board['idx'];?>"><button type="submit"> 글 삭제</button></a>
+
+            </div>
+			
+</div>
+</body>
+</html>
+<?php
+	}
+	else{
+		echo "<script>alert('잘못된 접근입니다.'); history.back();</script>";
+		}

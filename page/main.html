@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="travel" content="183828">
+	<title>기말프로젝트</title>
+	<script>
+			function showPopup() { window.open("../php/mypage.php", "정보수정", "width=550, height=450, left=100, top=50"); }
+	</script>
+</head>
+<link href="../css/format.css" type="text/css" rel="stylesheet" />
+<body>
+
+<div class="header">
+
+  <h1>Travel <small><br>여행지 정보 공유 사이트</small></h1>
+  
+</div>
+ 
+<nav>
+    <ul>
+		<li><a href="../php/logout.php" >로그아웃</a></li>
+		<li><a href="#" onclick="showPopup();">정보수정</a></li>
+    </ul>
+</nav>
+<h2>
+<?php
+include "../php/memberdb.php";
+	if(isset($_SESSION['userid'])){
+		echo $_SESSION['userid'];
+	}
+	else{
+		echo"---";
+		}
+?>님 환영합니다.</h2>
+
+	<br><br><br><br><br>
+	<h2 align="center"> 지역을 선택하세요 </h2>
+
+	<center>
+	<img align="center" src="../other/southkorea-1.png" alt="southkorea" usemap="#8do" width="1200" height="1800" >
+	<map name="8do">
+		<area shape="rect" coords="235, 1553, 358, 1598" alt="jajudo" href="./local/test.html"><!--제주도-->
+		<area shape="rect" coords="19, 1199, 199, 1247" alt="jeonnam" href="./local/test.html"><!--전라남도-->
+		<area shape="rect" coords="78, 809, 275, 957" alt="jeonbok" href="./local/test.html"><!--전라북도-->
+		<area shape="rect" coords="685, 1277, 853, 1331" alt="gyungnam" href="./local/test.html"><!--경상남도-->
+		<area shape="rect" coords="1035, 681, 1195, 723" alt="gyungbok" href="./local/test.html"><!--경상북도-->
+		<area shape="rect" coords="37, 683, 219, 727" alt="chungnam" href="./local/test.html"><!--충청남도-->
+		<area shape="rect" coords="985, 371, 1151, 423" alt="chungbok" href="./local/test.html"><!--충청북도-->
+		<area shape="rect" coords="125, 347, 225, 393" alt="seoul" href="./local/board_main.html"><!--서울-->
+		<area shape="rect" coords="123, 173, 261, 231" alt="gyunggi" href="./local/test.html"><!--경기도-->
+		<area shape="rect" coords="843, 117, 973, 167" alt="gangwon" href="./local/test.html"><!--강원도-->
+	</map>
+	</center>
+	
+	<div class="footer">
+	<h9> 제작자 183828 임재준</h9>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+h1 {
+  display: inline-block;
+  vertical-align: middle;
+  color: black;
+  margin: 0.5rem;
+  padding: 0;
+
+}
+
+nav {
+  display: inline-block;
+  vertical-align: center;
+  float: right;
+
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li.icon {
+  flex-basis: 25%;
+}
+
+.header {
+  background-color: cadetblue;
+  padding: 20px;
+  text-align: center;
+
+}
+.footer{
+	background-color: black;
+	text-align: center;
+	padding: 20px;
+	color: white;
+}
+a {
+  display: block;
+  text-align: center;
+  margin: .25rem;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background: teal;
+}
+
+a:hover {
+  background: yellowgreen;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

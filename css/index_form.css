@@ -1,0 +1,49 @@
+
+.h1 {
+  display: inline-block;
+  vertical-align: middle;
+  color: black;
+  margin: 0.5rem;
+  padding: 0;
+  text-align: center;
+}
+.header {
+  background-color: cadetblue;
+  padding: 20px;
+  text-align: center;
+
+}
+.footer{
+	background-color: black;
+	text-align: center;
+	padding: 20px;
+	color: white;
+}
+a {
+  display: block;
+  text-align: center;
+  margin: .25rem;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background: teal;
+}
+#btn 
+{
+  width:95px;
+  height:55px;
+  background: cadetblue;
+  border:solid 1px cadetblue;
+}
+a:hover {
+  background: yellowgreen;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}

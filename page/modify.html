@@ -1,0 +1,64 @@
+<!--- 게시글 수정 -->
+<?php
+	include"../php/boarddb.php";
+	if(isset($_SESSION['userid'])){
+ ?>
+<!doctype html>
+<head>
+<meta charset="UTF-8">
+<title>게시판</title>
+<link rel="stylesheet" type="text/css" href="../css/write.css" />
+</head>
+<body>
+<?php
+ 
+	$bno = $_GET['idx'];
+	$sql = mq2("select * from board where idx='".$bno."'");
+	$board = $sql->fetch_array();
+	
+	if($board['name'] == $_SESSION['userid']){
+	
+?>
+    <div class="board_write">
+        <h1><a href="/">자유게시판</a></h1>
+        <h4>글을 수정합니다.</h4>
+            <div>
+                <form action="../php/modify_ok.php?idx=<?php echo $bno; ?>" method="post" enctype="multipart/form-data">
+                    <div>
+                        <textarea name="title" rows="2" cols="120" placeholder="제목" maxlength="100" required><?php echo $board['title']; ?></textarea>
+                    </div>
+                    
+                    <div>
+                        <textarea name="content" placeholder="내용" rows="40" cols="120" maxlength="1000" ><?php echo $board['content']; ?></textarea>
+                    </div>
+					
+					<div>
+					<span style="color:black">
+						
+						Uploaded file: <?php echo $board['filename']; ?> 
+						<input type="radio" name="modi" value="modi">파일 수정<br>
+						
+						Modify file: <input type="file" name="modifile" />
+					</div>
+					<a href="./modify_ok.php?idx=<?php echo $board["idx"];?>">
+                    <div class="button">
+                        <button type="submit">글 수정</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+<?php
+}
+
+else{
+ echo "<script>
+    alert('작성자만 수정 할 수 있습니다.');
+    history.back();</script>";
+
+}
+	}
+	else{
+		echo "<script>alert('잘못된 접근입니다.'); history.back();</script>";
+		}
