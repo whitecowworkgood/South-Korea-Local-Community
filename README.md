@@ -3,8 +3,11 @@ south-korea-community는 2021년 2학기 목포대학교 정보보호학과 웹�
 
 
 MYSQL 테이블 구조
-project_member DB에서
+
+project_member DB에서 member 테이블
+
 <img width="80%" src="https://user-images.githubusercontent.com/112620533/187889839-d9170013-2e25-4c83-8f24-b37684e628a6.png"/>
 
-project_board DB에서
+project_board DB에서 board테이블
+
 <img width="80%" src="https://user-images.githubusercontent.com/112620533/187889842-b9aea2a2-e8bf-4605-9878-26e5d0d10bca.png"/>
