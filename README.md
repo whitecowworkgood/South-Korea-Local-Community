@@ -1,5 +1,5 @@
-south-korea-community
-south-korea-community는 2021년 2학기 목포대학교 정보보호학과 웹프로그래밍 프로젝트임을 밝힙니다.
+#south-korea-community
+##south-korea-community는 2021년 2학기 목포대학교 정보보호학과 웹프로그래밍 프로젝트 결과물임을 밝힙니다.
 
 
 MYSQL 테이블 구조
