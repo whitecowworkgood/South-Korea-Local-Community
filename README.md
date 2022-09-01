@@ -16,6 +16,17 @@
 **지역을 선택하는 메인 페이지이다. png파일을 이미지 맵기능을 통해 지역명을 클릭하면 게시판으로 넘어가게 하였다.**
 <img width="80%" src="https://user-images.githubusercontent.com/112620533/187922259-9bde3064-7a1d-4f2f-980c-7888f1c4a8d8.png"/>
 
+
+
+**게시판 페이지이다.**
+<img width="80%" src="https://user-images.githubusercontent.com/112620533/187923489-7d759056-3d29-464b-8b3c-77b3dae05c39.png"/>
+
+
+
+**게시판을 작성하게 되면 글제목_글쓴이라는 이름으로 폴더가 생성이 된다. 해당 게시글 업로드 파일은 해당폴더로만 저장이 된다.**
+<img width="80%" src="https://user-images.githubusercontent.com/112620533/187923486-5fa137db-a4ef-4416-aafc-e496cdc7007c.png"/>
+
+
 # MYSQL 테이블 구조
 
 **project_member DB에서 member 테이블**
