@@ -1,4 +1,4 @@
-<h3 align="center"><b>🛠 Tech Stack 🛠</b></h3>
+<h3 align="center"><b>:skull: Use Language :skull:</b></h3>
 </br>
 <p align="center">
 <img src="https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
@@ -7,14 +7,18 @@
 <img src="https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=CSS&logoColor=white">
 <img src="https://img.shields.io/badge/JAVASCRIPT-F7DF1E?style=for-the-badge&logo=JAVASCRIPT&logoColor=white">
 
+<h3 align="center"><b>🛠 Use Tools 🛠</b></h3>
+</br>
+<p align="center">
+<img src="https://img.shields.io/badge/Notepad++-90E59A?style=for-the-badge&logo=Notepad++&logoColor=white">
 
 
-# south-korea-community
+# South-Korea-Local-Community
 지역별로 각자의 커뮤니티를 운용하도록 만들어본 프로젝트
 현재는 하나의 지역만 게시판이 만들어져 있지만, 추후 추가를 한다면 언제든지 증원 가능
 
 # 만들게 된 계기
- south-korea-community는 2021년 2학기 목포대학교 정보보호학과 웹프로그래밍 프로젝트 결과물임을 밝힙니다.
+ South-Korea-Local-Community는 2021년 2학기 목포대학교 정보보호학과 웹프로그래밍 프로젝트 결과물임을 밝힙니다.
  html, php, mysql을 활용하여 웹 페이지를 만들어 본것에 의미를 두었습니다.
 
 # 웹 페이지 프리뷰
